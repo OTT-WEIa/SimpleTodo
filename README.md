@@ -226,7 +226,7 @@
 
 ```bash
 cd SimpleTodo
-echo "sdk.dir=/你的/Android/Sdk/路径" > local.properties   # Windows: sdk.dir=C\:\\Android\\Sdk
+echo "sdk.dir=/你的/Android/Sdk/路径" > local.properties   # Windows 用正斜杠最省事：sdk.dir=C:/Android/Sdk
 ./gradlew assembleDebug                                   # Windows: gradlew.bat assembleDebug
 ```
 
