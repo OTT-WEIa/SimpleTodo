@@ -20,17 +20,21 @@
 先在网页上新建一个**空仓库**（不要勾选 Add README / .gitignore / license，否则会冲突）：
 
 - 打开 <https://github.com/new>
-- Repository name 填 `SimpleTodo`
+- Owner 选你的账号 `OTT-WEIa`，Repository name 填 `SimpleTodo`
 - 描述可以填：`干点啥 —— 极简安卓待办清单 + 桌面小组件（无依赖 / 零权限 / 不联网）`
 - 选 Public → `Create repository`
 
-然后在本机执行（把 `你的用户名` 换成你的 GitHub 用户名）：
+> 仓库必须建出来之后才能推送。目前本机的远程地址已经配好了：
+> `https://github.com/OTT-WEIa/SimpleTodo.git`，所以**只差最后一条推送命令**。
+
+然后在本机执行：
 
 ```bash
 cd /d/AI/SimpleTodo
-git remote add origin https://github.com/你的用户名/SimpleTodo.git
 git push -u origin main
 ```
+
+如果提示 `Repository not found`，就是仓库还没创建（或建成了私有仓库但没登录）；如果建的是**私有**仓库，推送时会要账号密码，密码填 Personal Access Token。
 
 第一次推送会要账号和密码：**用户名填 GitHub 用户名，密码填 Personal Access Token**（不是登录密码）。
 Token 在 GitHub 网页：`Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token`，
