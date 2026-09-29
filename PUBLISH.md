@@ -1,67 +1,46 @@
-# 发布到 GitHub 的步骤（仓库已经在本地准备好了，只差最后一步）
+# 发布与维护
 
-我在这台机器上只能做到"建好本地仓库并提交"，**没法替你登录 GitHub**：
-这台机器没有装 GitHub CLI（`gh`），也没有任何 GitHub 凭据 / SSH 密钥，
-而且登录你的账号、处理你的 token 这种事应该由你自己来。
+## 仓库地址（已上线）
 
-下面任选一种，都能在两分钟内上线。
+<https://github.com/OTT-WEIa/SimpleTodo> —— Public，MIT 协议，`main` 分支已推送。
 
-## 方式一：GitHub Desktop（最省事，不用命令行）
-
-1. 打开 GitHub Desktop → `File` → `Add local repository…`
-2. 选择这个目录：`D:\AI\SimpleTodo`
-3. 右上角点 `Publish repository`
-4. 想公开就**取消勾选** `Keep this code private` → `Publish`
-
-完成后它会直接给你仓库地址。
-
-## 方式二：命令行（推荐，两条命令）
-
-先在网页上新建一个**空仓库**（不要勾选 Add README / .gitignore / license，否则会冲突）：
-
-- 打开 <https://github.com/new>
-- Owner 选你的账号 `OTT-WEIa`，Repository name 填 `SimpleTodo`
-- 描述可以填：`干点啥 —— 极简安卓待办清单 + 桌面小组件（无依赖 / 零权限 / 不联网）`
-- 选 Public → `Create repository`
-
-> 仓库必须建出来之后才能推送。目前本机的远程地址已经配好了：
-> `https://github.com/OTT-WEIa/SimpleTodo.git`，所以**只差最后一条推送命令**。
-
-然后在本机执行：
+## 日常维护：改完代码怎么更新上去
 
 ```bash
 cd /d/AI/SimpleTodo
-git push -u origin main
+git add -A
+git commit -m "说明这次改了什么"
+git push
 ```
 
-如果提示 `Repository not found`，就是仓库还没创建（或建成了私有仓库但没登录）；如果建的是**私有**仓库，推送时会要账号密码，密码填 Personal Access Token。
+用 GitHub Desktop 也一样：写 commit message → `Commit to main` → `Push origin`。
 
-第一次推送会要账号和密码：**用户名填 GitHub 用户名，密码填 Personal Access Token**（不是登录密码）。
-Token 在 GitHub 网页：`Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token`，
-勾上 `repo` 权限即可，生成后只显示一次，复制出来当密码用。
-
-## 方式三：网页上传（不想装任何工具）
-
-在新建的空仓库页面点 `uploading an existing file`，把 `SimpleTodo` 目录里的内容拖进去，
-**注意不要拖 `local.properties`、`build/`、`.gradle/`、`SimpleTodo-v3.3.apk`**（这些是本机产物，已经在 .gitignore 里排除了）。
-
----
-
-## 建议填的仓库信息（开源仓库的门面）
-
-| 项目 | 建议值 |
-| --- | --- |
-| Repository name | `SimpleTodo` |
-| Description | 干点啥 —— 极简安卓待办清单 + 桌面小组件（无依赖 / 零权限 / 不联网） |
-| Topics | `android` `java` `todo` `todo-list` `widget` `appwidget` `no-dependencies` `chinese` |
-| License | MIT（`.gitignore` 和 `LICENSE` 已经放在仓库里了，创建后 GitHub 会自动识别） |
+> 本机没有保存 GitHub 凭据，如果 `git push` 弹窗要账号密码：
+> **用户名填 GitHub 用户名，密码填 Personal Access Token**（不是登录密码）。
+> Token 在网页 `Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token`，
+> 勾 `repo` 权限即可，生成后只显示一次。想一劳永逸就让弹窗记住凭据，之后直接 push。
+> 更省事的办法：改完直接用 GitHub Desktop 提交并推送（它已经登录过了，不用再输 token）。
 
 ## 想放 apk 给大家直接下载
 
-GitHub 的 `Releases` 页面可以附二进制文件（仓库里的 `*.apk` 会被 .gitignore 排除，这是正常做法）：
+仓库里的 `*.apk` 会被 `.gitignore` 排除，这是正常做法；二进制放 Release 更合适：
 
 1. 仓库页面右侧 `Releases` → `Draft a new release`
 2. Tag 填 `v3.3`，Title 填 `干点啥 v3.3`
-3. 把 `SimpleTodo-v3.3.apk` 拖到下方的附件区 → `Publish release`
+3. 把 `SimpleTodo-v3.3.apk` 拖到下方附件区 → `Publish release`
 
-之后 README 里的"Releases 页面附了 apk"那条就对上了。
+## 仓库门面（可选，建议补上）
+
+仓库首页 `About` 右侧齿轮里可以填 `Topics`：
+`android` `java` `todo` `todo-list` `widget` `appwidget` `no-dependencies` `chinese`
+
+Description 已经填好：`干点啥 —— 极简安卓待办清单 + 桌面小组件（无依赖 / 零权限 / 不联网）`
+
+## 换台机器继续开发
+
+```bash
+git clone https://github.com/OTT-WEIa/SimpleTodo.git
+cd SimpleTodo
+echo "sdk.dir=/你的/Android/Sdk/路径" > local.properties   # Windows 用正斜杠更省事
+./gradlew assembleDebug                                   # Windows: gradlew.bat assembleDebug
+```
