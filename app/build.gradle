@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.minimal.todo'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.minimal.todo"
+        minSdk 24
+        targetSdk 34
+        versionCode 24
+        versionName "3.3"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            // 用调试证书签 release：既方便直接安装，又能拿到 debuggable=false 的包
+            // （debuggable=false 的包更难被挂调试器、注入代码）
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+// 本项目只使用 Android 框架自带 API，没有任何第三方依赖，
+// 因此首次构建只需要 Android SDK，不需要额外下载依赖包。
+dependencies {
+}

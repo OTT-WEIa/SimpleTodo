@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 列表里的分组标题：有日期 / 无日期 / 已完成，以及周视图里的每一天 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_text"
+    android:includeFontPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="14dp"
+    android:paddingTop="12dp"
+    android:paddingEnd="14dp"
+    android:paddingBottom="6dp"
+    android:textColor="@color/text_secondary"
+    android:textSize="12sp"
+    android:textStyle="bold" />

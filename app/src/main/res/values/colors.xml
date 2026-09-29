@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用界面：不透明白底（透明/毛玻璃效果只留给桌面小组件） -->
+    <color name="bg">#FFFFFFFF</color>
+    <color name="card">#FFF6F7FA</color>
+    <color name="field">#FFF1F2F7</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="line">#FFE6E7EE</color>
+
+    <color name="ripple">#1F3D7EFF</color>
+
+    <color name="text_primary">#FF1F1F24</color>
+    <color name="text_secondary">#FF5A5A66</color>
+    <color name="text_hint">#FF8E8E9A</color>
+    <color name="text_done">#FFAEAEBA</color>
+    <!-- 已过期待办的时间颜色 -->
+    <color name="time_overdue">#FFE5484D</color>
+    <color name="accent">#FF3D7EFF</color>
+    <color name="on_accent">#FFFFFFFF</color>
+    <!-- 小组件里未打勾的空心圆颜色 -->
+    <color name="check_off">#FFA8A8B6</color>
+
+    <!-- 桌面小组件的玻璃背景：只有小组件是半透明的，刻意不填纯白，让壁纸透出来 -->
+    <color name="widget_glass_fill">#66F2F4F9</color>
+    <color name="widget_glass_stroke">#59FFFFFF</color>
+    <color name="widget_glass_highlight">#4DFFFFFF</color>
+    <color name="widget_frost_fill">#4DF5F6FA</color>
+    <color name="widget_frost_stroke">#40FFFFFF</color>
+    <!-- 小组件文字阴影，保证在任何壁纸上都看得清 -->
+    <color name="widget_text_shadow">#59000000</color>
+
+    <color name="ic_launcher_background">#FF3D7EFF</color>
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 4×2 小组件：更宽的排版，字号和行高都放大一档 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/widget_glass_liquid"
+        android:importantForAccessibility="no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/widget_glass" />
+
+    <ImageView
+        android:id="@+id/widget_glass_frost"
+        android:importantForAccessibility="no"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/widget_glass_frost"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/widget_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:shadowColor="@color/widget_text_shadow"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2.5"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/widget_toggle_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip"
+                android:paddingStart="11dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="11dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/accent"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/widget_add"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="9dp"
+                android:contentDescription="@string/quick_add_title"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add_circle" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/widget_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp" />
+
+            <TextView
+                android:id="@+id/widget_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:shadowColor="@color/widget_text_shadow"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2.5"
+                android:text="@string/widget_empty"
+                android:textColor="@color/text_hint"
+                android:textSize="13sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

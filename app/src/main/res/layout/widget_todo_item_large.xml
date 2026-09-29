@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 4×2 小组件的一行：分组标题（默认隐藏）+ 圆点 + 标题 + 右边两行小字（时间/地点） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="2dp"
+        android:paddingBottom="1dp"
+        android:shadowColor="@color/widget_text_shadow"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="2.5"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/item_row_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/item_check"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_check_off" />
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:shadowColor="@color/widget_text_shadow"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="2.5"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/item_meta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:gravity="end"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:maxLines="1"
+                android:shadowColor="@color/widget_text_shadow"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2.5"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:maxLines="1"
+                android:shadowColor="@color/widget_text_shadow"
+                android:shadowDx="0"
+                android:shadowDy="1"
+                android:shadowRadius="2.5"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

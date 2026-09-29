@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">干点啥</string>
+    <string name="settings_title">设置</string>
+    <string name="settings_widget">桌面小组件显示</string>
+    <string name="settings_accent">主题色</string>
+    <string name="settings_night">深浅模式</string>
+    <string name="night_system">跟随系统</string>
+    <string name="night_light">浅色</string>
+    <string name="night_dark">深色</string>
+
+    <!-- 主界面 -->
+    <string name="input_hint">添加待办…</string>
+    <string name="add">添加</string>
+    <string name="help">说明</string>
+    <string name="help_ok">知道了</string>
+    <string name="first_run_ok">我知道了</string>
+    <string name="first_run_msg">本软件为AI制作，免费公开使用，如果您在其他平台付费获得，请尽快联系处理</string>
+    <string name="signature">制作者：弌弍弎-AI</string>
+    <string name="guard_title">安全提示</string>
+    <string name="guard_msg">检测到本应用的安装包可能被改动过：%1$s\n\n建议卸载后从原渠道重新安装，以免带上广告或不明代码。</string>
+    <string name="guard_reason_permission">多出了权限（%1$s）</string>
+    <string name="guard_reason_signature">签名与原始版本不一致</string>
+    <string name="tab_all">全部</string>
+    <string name="reset_chip">重置</string>
+    <string name="reset_toast">已重置时间、地点和颜色</string>
+    <string name="help_title">说明</string>
+    <string name="tab_active">未完成</string>
+    <string name="help_msg">主要功能\n· 添加：写内容点「＋」；想带时间 / 地点 / 颜色，先点下面的胶囊再添加。\n· 完成：点方框或整行打勾；点右侧铅笔编辑，垃圾桶删除（有确认）。\n· 排序：长按整行上下拖动调整顺序。\n· 视图：顶部「列表 / 日历」；日历点「周」是课程表样式（一屏一周），点「月」回整月。\n· 分组：列表和日历都把「有日期」和「无日期」分开显示。\n· 小组件：桌面长按 →「小组件」→「干点啥」；点一行打勾，点右上角 ＋ 快速添加。\n\n设置\n· 小组件显示：透明毛玻璃 / 液态玻璃。\n· 主题色：蓝 / 绿 / 紫 / 橙 / 红 / 青。\n· 深浅模式：跟随系统 / 浅色 / 深色。\n\n更新记录\n· 3.0 设置面板（小组件显示 / 主题色 / 深浅）与说明；文字上下居中。\n· 2.7～2.9 长按拖动排序、独立编辑按钮、未设颜色用空心圆。\n· 2.5～2.6 可编辑内容 / 时间 / 地点、地点字段、日历整格填色、一键重置。\n· 1.9 颜色标注、日历（月 / 周）、有日期与无日期分组。</string>
+    <string name="tab_done">已完成</string>
+    <string name="empty_hint">还没有待办\n在上方输入内容，点「＋」添加</string>
+    <string name="empty_day">这一天没有待办</string>
+    <string name="summary">共 %1$d 项 · 未完成 %2$d 项</string>
+    <string name="clear_done">清除已完成</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="confirm_delete_title">删除待办</string>
+    <string name="confirm_delete_msg">确定删除「%1$s」？</string>
+    <string name="confirm_clear_title">清除已完成</string>
+    <string name="confirm_clear_msg">确定删除全部 %1$d 项已完成的待办？</string>
+    <string name="empty_input">请先输入内容</string>
+    <string name="nothing_done">还没有已完成的待办</string>
+    <string name="cleared_toast">已清除 %1$d 项</string>
+
+    <!-- 视图切换：列表 / 月 / 周 -->
+    <string name="view_list">列表</string>
+    <string name="view_calendar">日历</string>
+    <string name="calendar_zoom_in">周</string>
+    <string name="calendar_zoom_out">月</string>
+    <string name="calendar_hint_month">这个月还没有「设了时间」的待办。给待办设个时间（点上面的时间胶囊），它就会出现在这里。</string>
+    <string name="calendar_hint_week">这一周还没有「设了时间」的待办。</string>
+
+    <!-- 分组标题 -->
+    <string name="group_dated">有日期</string>
+    <string name="group_undated">无日期</string>
+    <string name="group_done">已完成</string>
+
+    <!-- 日历 -->
+    <string name="calendar_prev">上一页</string>
+    <string name="calendar_next">下一页</string>
+    <string name="calendar_prev_mark">‹</string>
+    <string name="calendar_next_mark">›</string>
+    <string name="calendar_month_title">%1$d年%2$d月</string>
+    <string name="calendar_week_title">%1$d月%2$d日 - %3$d月%4$d日</string>
+    <string name="weekday_1">一</string>
+    <string name="weekday_2">二</string>
+    <string name="weekday_3">三</string>
+    <string name="weekday_4">四</string>
+    <string name="weekday_5">五</string>
+    <string name="weekday_6">六</string>
+    <string name="weekday_7">日</string>
+
+    <!-- 待办时间 -->
+    <string name="time_label_none">不设置时间</string>
+    <string name="time_chip_none">下一条不设置时间</string>
+    <string name="time_chip_set">下一条：%1$s</string>
+    <string name="pick_time_title">设置待办时间</string>
+    <string name="pick_today">今天</string>
+    <string name="pick_tomorrow">明天</string>
+    <string name="pick_custom">自定义日期和时间</string>
+    <string name="pick_clear">清除时间</string>
+    <string name="time_today">今天 %1$s</string>
+    <string name="time_tomorrow">明天 %1$s</string>
+    <string name="time_this_year">%1$d月%2$d日 %3$s</string>
+    <string name="time_other_year">%1$d年%2$d月%3$d日 %4$s</string>
+    <!-- 小组件里的紧凑格式，最多 5 个字 -->
+    <string name="time_compact_tomorrow">明%1$s</string>
+    <string name="time_compact_date">%1$d/%2$d</string>
+
+    <!-- 颜色标注 -->
+    <string name="color_title">选择颜色</string>
+    <string name="color_chip">颜色</string>
+    <string name="color_none">不设颜色</string>
+
+    <!-- 地点（自己填，不做定位） -->
+    <string name="place_chip">地点</string>
+    <string name="place_label_none">不设地点</string>
+    <string name="place_title">地点</string>
+    <string name="place_hint">地点（自己填，可不填）</string>
+    <string name="place_clear">清除地点</string>
+    <string name="place_with_separator">· %1$s</string>
+
+    <!-- 编辑待办 -->
+    <string name="edit_title">编辑待办</string>
+    <string name="edit_title_hint">待办内容</string>
+
+    <!-- 小组件外观（只影响桌面小组件） -->
+    <string name="theme_frosted">透明毛玻璃</string>
+    <string name="theme_liquid">液态玻璃</string>
+    <string name="theme_close">关闭</string>
+
+    <!-- 快速添加（小组件上的＋） -->
+    <string name="quick_add_title">快速添加待办</string>
+    <string name="quick_add_hint">要做什么？</string>
+
+
+    <!-- 桌面小组件 -->
+    <string name="widget_title">待办 %1$d/%2$d</string>
+    <string name="widget_empty">暂无待办\n点右上角 ＋ 添加</string>
+    <string name="widget_empty_short">暂无待办</string>
+    <string name="widget_item_done">「%1$s」已完成，点一下取消打勾</string>
+    <string name="widget_item_undone">「%1$s」未完成，点一下打勾</string>
+    <string name="show_done">显示已办</string>
+    <string name="hide_done">隐藏已办</string>
+
+    <!-- 三种尺寸在桌面「小组件」列表里的名字 -->
+    <string name="widget_label_small">干点啥 · 小 2×2</string>
+    <string name="widget_label_medium">干点啥 · 中 3×2</string>
+    <string name="widget_label_large">干点啥 · 大 4×2</string>
+    <string name="widget_desc_small">2×2 尺寸，点一下打勾</string>
+    <string name="widget_desc_medium">3×2 尺寸，点一下打勾</string>
+    <string name="widget_desc_large">4×2 尺寸，字号更大，点一下打勾</string>
+</resources>

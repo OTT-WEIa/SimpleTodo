@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  主界面一行：卡片 + 方框 + 颜色圆点 + 标题 + （时间 · 地点）+ 删除。
+  点方框/整行＝打勾；点时间地点那一行＝编辑这条待办（内容/时间/地点）；长按整行也能编辑。
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:gravity="center_vertical"
+    android:minHeight="58dp"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="4dp">
+
+    <CheckBox
+        android:id="@+id/item_check"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:buttonTint="?android:attr/colorAccent"
+        android:focusable="false"
+        android:gravity="center" />
+
+    <!-- 颜色圆点：点这里可以改颜色。高度和方框、按钮统一，保证都上下居中 -->
+    <FrameLayout
+        android:id="@+id/item_color_hit"
+        android:layout_width="28dp"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true">
+
+        <View
+            android:id="@+id/item_color_dot"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:includeFontPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp" />
+
+        <!-- 时间 · 地点：点这一行编辑待办 -->
+        <LinearLayout
+            android:id="@+id/item_meta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/item_time"
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_clock"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/item_place"
+                android:includeFontPadding="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="140dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 编辑这一条（内容 / 时间 / 地点），放在删除按钮前面 -->
+    <ImageButton
+        android:id="@+id/item_edit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/edit_title"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_edit"
+        android:tint="@color/text_hint" />
+
+    <ImageButton
+        android:id="@+id/item_delete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/delete"
+        android:padding="9dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_delete"
+        android:tint="@color/text_hint" />
+
+</LinearLayout>

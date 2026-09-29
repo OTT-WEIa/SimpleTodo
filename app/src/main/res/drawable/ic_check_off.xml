@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 未打勾：空心圆，颜色跟随主题（浅色底上是深灰，深色底上是浅灰） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/check_off"
+        android:strokeWidth="1.8"
+        android:pathData="M12,3.2 A8.8,8.8 0 1,0 12,20.8 A8.8,8.8 0 1,0 12,3.2 Z" />
+</vector>

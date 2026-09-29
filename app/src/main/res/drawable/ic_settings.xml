@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置：三条横线 + 小圆点（扁平风格） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,6.4h18v1.6h-18z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,11.2h18v1.6h-18z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M3,16h18v1.6h-18z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M7.2,5.1A2.1,2.1 0 1,0 7.2,9.3A2.1,2.1 0 1,0 7.2,5.1Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M16.8,9.9A2.1,2.1 0 1,0 16.8,14.1A2.1,2.1 0 1,0 16.8,9.9Z" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M10.8,14.7A2.1,2.1 0 1,0 10.8,18.9A2.1,2.1 0 1,0 10.8,14.7Z" />
+</vector>

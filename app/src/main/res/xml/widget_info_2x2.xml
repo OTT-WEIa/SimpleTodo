@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  2×2 小组件。
+
+  尺寸为什么取 110×110dp：
+  桌面决定小组件占几格，除了 Android 12+ 的 targetCellWidth/Height，
+  有些 ROM（含荣耀/华为）还会按老公式 格数 = ceil((尺寸 + 30) / 70) 反推：
+  (110+30)/70 = 刚好 2.0 → 占 2 格；写成 117dp 会被向上取整成 3 格，
+  小组件就会比系统那个 2×2 文件夹小组件高出一截。
+  3×2 用 180dp、4×2 用 250dp 同理（= 70×格数 − 30）。
+  targetCellWidth/Height 保留给优先使用格子数的桌面。
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:description="@string/widget_desc_small"
+    android:initialLayout="@layout/widget_todo_2x2"
+    android:minWidth="110dp"
+    android:minHeight="110dp"
+    android:minResizeWidth="110dp"
+    android:minResizeHeight="110dp"
+    android:previewImage="@drawable/widget_preview_small"
+    android:resizeMode="horizontal|vertical"
+    android:targetCellWidth="2"
+    android:targetCellHeight="2"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen"
+    tools:targetApi="s" />

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 圆圈里一个问号：说明入口 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/text_hint"
+        android:strokeWidth="1.6"
+        android:pathData="M12,3.4 A8.6,8.6 0 1,0 12,20.6 A8.6,8.6 0 1,0 12,3.4 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/text_hint"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:pathData="M9.4,9.4c0,-1.5 1.2,-2.5 2.6,-2.5c1.5,0 2.6,1 2.6,2.4c0,1.7 -1.7,2 -2.6,3c-0.3,0.4 -0.3,0.9 -0.3,1.4" />
+    <path
+        android:fillColor="@color/text_hint"
+        android:pathData="M11,16.6h1.8v1.9h-1.8z" />
+</vector>

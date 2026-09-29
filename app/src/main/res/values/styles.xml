@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      应用界面是不透明白底：
+      windowIsTranslucent 不开、窗口背景用不透明色，状态栏也用同一个色，
+      这样打开应用就是整屏统一的白色（深色模式是近黑）。
+      毛玻璃 / 液态玻璃只作用在桌面小组件上，见 drawable/widget_glass*.xml。
+    -->
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- 小组件「＋」弹出的快速添加窗口：浮在桌面上的一点小卡片 -->
+    <style name="AppTheme.QuickAdd" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimAmount">0.45</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible|adjustResize</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
+    <!-- 主题色：只改 colorAccent，界面里强调色都引用 ?android:attr/colorAccent -->
+    <style name="AccentBlue"><item name="android:colorAccent">#FF3D7EFF</item></style>
+    <style name="AccentGreen"><item name="android:colorAccent">#FF22A06B</item></style>
+    <style name="AccentPurple"><item name="android:colorAccent">#FF8B5CF6</item></style>
+    <style name="AccentOrange"><item name="android:colorAccent">#FFDE8C1C</item></style>
+    <style name="AccentRed"><item name="android:colorAccent">#FFE5484D</item></style>
+    <style name="AccentTeal"><item name="android:colorAccent">#FF1F8F8F</item></style>
+
+    <!-- 日历里的星期表头 -->
+    <style name="CalendarWeekday">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_hint</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 放大后日历格子里的每条待办：浅色实心矩形 + 黑字，高度固定好按时间摆放 -->
+    <style name="CalendarCellItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">3dp</item>
+        <item name="android:paddingEnd">3dp</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <!-- 筛选标签 / 视图切换：未选中浅灰胶囊，选中强调色胶囊 -->
+    <style name="FilterTab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/tab_text</item>
+        <item name="android:background">@drawable/tab_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+</resources>

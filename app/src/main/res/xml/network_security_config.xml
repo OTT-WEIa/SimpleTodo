@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基础防线：这个应用不需要联网，明确禁止明文流量（本身也没有联网权限） -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

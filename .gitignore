@@ -1,0 +1,21 @@
+# ---- 构建产物 ----
+build/
+.gradle/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+captures/
+.externalNativeBuild/
+.cxx/
+
+# ---- 本机配置（每个人路径不一样，不要提交）----
+local.properties
+.idea/
+*.iml
+*.hprof
+
+# ---- 系统杂物 ----
+.DS_Store
+Thumbs.db

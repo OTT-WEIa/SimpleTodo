@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  日历里的一格。
+  · 月视图：整格填淡色表示那天有安排（只有一条带颜色的待办就填它的淡色，否则填淡灰），
+    日期数字在格子里上下左右居中；
+  · 周视图（课程表那样）：日期数字贴顶，下面若干「浅色实心矩形 + 黑字」的待办块，
+    块的上下位置按它的时间在一天里的位置摆。
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingStart="1dp"
+    android:paddingTop="2dp"
+    android:paddingEnd="1dp"
+    android:paddingBottom="2dp">
+
+    <!-- 月视图里靠 weight 撑满整格、gravity 居中；周视图里由代码改成贴顶固定高度 -->
+    <TextView
+        android:id="@+id/day_number"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp" />
+
+    <!-- 周视图的待办块：每块按时间摆放，所以用 FrameLayout + 动态 topMargin -->
+    <FrameLayout
+        android:id="@+id/day_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/day_item_0"
+            style="@style/CalendarCellItem" />
+
+        <TextView
+            android:id="@+id/day_item_1"
+            style="@style/CalendarCellItem" />
+
+        <TextView
+            android:id="@+id/day_item_2"
+            style="@style/CalendarCellItem" />
+
+        <TextView
+            android:id="@+id/day_item_3"
+            style="@style/CalendarCellItem" />
+
+        <TextView
+            android:id="@+id/day_item_4"
+            style="@style/CalendarCellItem" />
+    </FrameLayout>
+
+</LinearLayout>
