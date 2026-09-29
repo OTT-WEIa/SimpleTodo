@@ -9,7 +9,7 @@
 ## 方式一：GitHub Desktop（最省事，不用命令行）
 
 1. 打开 GitHub Desktop → `File` → `Add local repository…`
-2. 选择这个目录：`C:\Users\zw262\.zcode\workspace\default\SimpleTodo`
+2. 选择这个目录：`D:\AI\SimpleTodo`
 3. 右上角点 `Publish repository`
 4. 想公开就**取消勾选** `Keep this code private` → `Publish`
 
@@ -27,7 +27,7 @@
 然后在本机执行（把 `你的用户名` 换成你的 GitHub 用户名）：
 
 ```bash
-cd /c/Users/zw262/.zcode/workspace/default/SimpleTodo
+cd /d/AI/SimpleTodo
 git remote add origin https://github.com/你的用户名/SimpleTodo.git
 git push -u origin main
 ```
